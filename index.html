@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>lightspeedarchive</title>
+	</head>
+
+	<body>
+		<center>
+		<br>
+		<h1 id='title'></h1>
+		<h2><i>By yours truly, lightspeedana</i></h2>
+		<p><b>So, What is This Thing?</b></p>
+		<p>After starting CS A Level and having to juggle it with everything else, I realised all of my code was getting super messy and that things needed to change. Hence, this is my way of making an organised system that archives all my old classwork, whilst also acting as a nice development portfolio (for anyone who actually cares).</p>
+		<p><b>DISCLAIMER -</b> My code is messy so please do not judge, this is mostly a holding space for extremely brief class projects and not really for anything else, unless specified.</p>
+		</center>
+		
+		<script>
+			var i = 0;
+			var txt = 'Welcome to my Computing Project Archive!';
+			var speed = 50;
+
+			function typeWriter() {
+			  if (i < txt.length) {
+				document.getElementById("title").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			  }
+			}
+			typeWriter();
+		</script>
+	</body>
+</html>
+<style>
+	/* I like inline styling, sorry! I'll fix it sometime soonTM*/
+	@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+	body{
+		background: black;
+	}
+	h1, h2, p{
+		font-family: 'Ubuntu Mono';
+		color: #5DE769;
+	}
+	
+	h2, p{
+		 animation-delay: 50s;
+		 -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 2s; /* Firefox < 16 */
+         -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+	}
+
+	@keyframes fadein {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes fadein {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadein {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes fadein {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+
+	/* Opera < 12.1 */
+	@-o-keyframes fadein {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+</style>
